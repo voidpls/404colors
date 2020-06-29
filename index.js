@@ -12,11 +12,10 @@ function initServer() {
 (async () => {
     const browser = await canvas.init()
     if (browser) console.log('PUPPETEER: Spawned headless Chromium')
-    // 
-    // app.get('/colors.json', async (req, res) => {
-    //     const colorRoles = await getColors(discord)
-    //     res.send(colorRoles)
-    // })
+    app.get('/colors.json', async (req, res) => {
+        const colorRoles = await getColors(discord)
+        res.send(colorRoles)
+    })
     app.get('/colors.png', async (req, res) => {
         const colorRoles = await getColors(discord)
         const screenshot = await canvas.screenshot(browser, colorRoles)
