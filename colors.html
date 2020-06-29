@@ -27,6 +27,8 @@
                 font-size: 26px;
             }
             body {
+                margin: 0;
+                padding: 0;
                 /* margin: 30px; */
             }
             .heading {
@@ -34,6 +36,7 @@
                 line-height: 140%;
                 font-weight: bold;
                 font-size: 30px;
+                margin-bottom: 25px;
             }
             cmd {
                 background: #2F3136;
@@ -49,7 +52,7 @@
                 font-weight: normal;
             }
             .columns {
-                margin-left: 10px;
+                padding-left: 10px;
                 display: grid;
                 width: 100%;
                 grid-template-columns: {{GRID_COLUMN_CSS}};
@@ -78,7 +81,6 @@
         <div class="heading">
             Use the command <cmd>-iam [color]</cmd> in <channel>#trash</channel> to change your name color. To remove a color, use <cmd>-iamnot [color]</cmd> instead.
         </div>
-        <br>
         <div class='columns'>
             {{COLUMNS}}
         </div>
