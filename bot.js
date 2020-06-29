@@ -51,8 +51,6 @@ const bot = new Client({
     disableEveryone: true
 })
 
-const discord = new events.EventEmitter()
-
 exports.discord = bot
 exports.getColors = getColors
 
