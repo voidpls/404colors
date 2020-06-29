@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>404 Colors</title>
+        <style>
+            @font-face {
+                font-family: "Helvetica Neue";
+                font-weight: normal;
+                src: url(./fonts/HelveticaNeuaMd.ttf) format("truetype");
+            }
+            @font-face {
+                font-family: "Helvetica Neue";
+                font-weight: bold;
+                src: url(./fonts/HelveticaNeuaBld.ttf) format("truetype");
+            }
+            html {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                font-family: "Helvetica Neue";
+                font-weight: normal;
+                background: #36393F;
+                color: #fff;
+                font-size: 26px;
+            }
+            body {
+                /* margin: 30px; */
+            }
+            .heading {
+                text-align: center;
+                line-height: 140%;
+                font-weight: bold;
+                font-size: 30px;
+            }
+            cmd {
+                background: #2F3136;
+                padding: 3px;
+                font-weight: normal;
+            }
+            channel {
+                background: #3C414F;
+                color: #7289da;
+                padding: 3px;
+                font-weight: normal;
+            }
+            .columns {
+                margin-left: 10px;
+                display: grid;
+                width: 100%;
+                grid-template-columns: {{GRID_COLUMN_CSS}};
+            }
+            .column {
+                line-height: 170%;
+            }
+            .entry {
+                font-weight: bold;
+                display: block;
+            }
+            .colorBox {
+                box-shadow: none;
+                border-radius: 5px;
+                height: 19px;
+                width: 30px;
+                display: inline-block;
+            }
+            .colorName {
+                display: inline-block;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="heading">
+            Use the command <cmd>-iam [color]</cmd> in <channel>#trash</channel> to change your name color. To remove a color, use <cmd>-iamnot [color]</cmd> instead.
+        </div>
+        <br>
+        <div class='columns'>
+            {{COLUMNS}}
+            <!-- <div class='column' id="column1">
+                {{COLUMN_1}}
+            </div>
+            <div class='column' id="column2">
+                {{COLUMN_2}}
+            </div>
+            <div class='column' id="column3">
+                {{COLUMN_3}}
+            </div>
+            <div class='column' id="column4">
+                {{COLUMN_4}}
+            </div> -->
+        </div>
+    </body>
+</html>
