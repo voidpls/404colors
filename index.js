@@ -30,12 +30,12 @@ function initServer() {
         initServer()
     })
     discord.on('message', async msg => {
-        if (!msg.content.startsWith(PREFIX) || msg.guild.id !== GUILD) return
-        const cmd = msg.content.slice(PREFIX.length).toLowerCase()
-        if (['colors', 'colours'].includes(cmd)) {
-            const colorRoles = await getColors(discord)
-            const screenshot = await canvas.screenshot(browser, colorRoles)
-            await msg.channel.send({files:[{attachment: screenshot, name:'colors.png'}]})
-        }
+        // if (!msg.content.startsWith(PREFIX) || msg.guild.id !== GUILD) return
+        // const cmd = msg.content.slice(PREFIX.length).toLowerCase()
+        // if (['colors', 'colours'].includes(cmd)) {
+        //     const colorRoles = await getColors(discord)
+        //     const screenshot = await canvas.screenshot(browser, colorRoles)
+        //     await msg.channel.send({files:[{attachment: screenshot, name:'colors.png'}]})
+        // }
     })
 })()
